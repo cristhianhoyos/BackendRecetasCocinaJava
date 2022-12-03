@@ -11,4 +11,6 @@ public interface ILenguajeService {
     public LenguajeModel saveLenguaje(LenguajeModel lenguajeModel);
 
     public ArrayList<LenguajeModel> findAll();
+
+    public void deleteAll();
 }

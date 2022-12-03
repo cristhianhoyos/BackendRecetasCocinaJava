@@ -10,5 +10,7 @@ public interface LenguajeDao extends CrudRepository<LenguajeModel,Long> {
 
     public Optional<LenguajeModel> findById(Long id);
 
+    public void deleteAll();
+
     public ArrayList<LenguajeModel> findAll();
 }

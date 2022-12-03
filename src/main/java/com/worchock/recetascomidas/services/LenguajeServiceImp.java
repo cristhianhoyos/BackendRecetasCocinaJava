@@ -27,4 +27,9 @@ public class LenguajeServiceImp implements ILenguajeService{
     public ArrayList<LenguajeModel> findAll() {
         return lenguajeDao.findAll();
     }
+
+    @Override
+    public void deleteAll() {
+        lenguajeDao.deleteAll();
+    }
 }

@@ -34,6 +34,13 @@ public class LenguajesController {
         return lenguajeService.saveLenguaje(lenguajeModel);
     }
 
+    @PostMapping("/deleteAllLenguaje")
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteAllLenguaje(){
+        System.out.println("Se elimina lenguajes");
+        lenguajeService.deleteAll();
+    }
+
     @GetMapping("/findLenguaje")
     @ResponseStatus(HttpStatus.OK)
     public LenguajeModel getLenguajeById(@RequestBody LenguajeModel lenguajeModel){
