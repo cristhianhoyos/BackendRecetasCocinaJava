@@ -78,18 +78,12 @@ public class UsuariosController {
     @PostMapping("/logginUsuario")
     public ResponseEntity<?> logginUsuario(@RequestBody UsuariosModel usuariosModel){
         try{
-            Optional<UsuariosModel> usuariosModelDB = usuarioService.findByNombreUsuarioAndContrasena(usuariosModel.getNombreUsuario(),usuariosModel.getContrasena());
-            if (usuariosModelDB.isEmpty()){
-                Optional<UsuariosModel> usuario = usuarioService.findByCorreoElectronicoAndContrasena(usuariosModel.getCorreoElectronico(),usuariosModel.getContrasena());
-                if (usuario.isEmpty()){
-                    return new ResponseEntity<>(false,HttpStatus.NOT_FOUND);
-                }else{
-                    return new ResponseEntity<>(usuariosModelDB.get().getIdUser(),HttpStatus.OK);
-                }
+            Optional<UsuariosModel> usuario = usuarioService.findByCorreoElectronicoAndContrasena(usuariosModel.getCorreoElectronico(),usuariosModel.getContrasena());
+            if (usuario.isEmpty()){
+                return new ResponseEntity<>(false,HttpStatus.NOT_FOUND);
             }else{
-                return new ResponseEntity<>(usuariosModelDB.get().getIdUser(),HttpStatus.OK);
+                return new ResponseEntity<>(usuario.get().getIdUser(),HttpStatus.OK);
             }
-
         }catch (Exception e){
             return new ResponseEntity<>(false,HttpStatus.NOT_FOUND);
         }
