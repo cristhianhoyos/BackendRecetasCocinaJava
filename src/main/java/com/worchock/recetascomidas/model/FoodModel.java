@@ -30,7 +30,8 @@ public class FoodModel implements Serializable {
     private String nombreComida;
     @Column(name="descripcionComida")
     private String descripcionComida;
-    @Column(length = 2000)
+    @Lob
+    @Column(name= "imageData", length = 1000)
     private String foto;
 
     @Column(name="lenguajeEspanol")
