@@ -88,4 +88,14 @@ public class UsuariosController {
             return new ResponseEntity<>(false,HttpStatus.NOT_FOUND);
         }
     }
+
+    @PostMapping("/findUserByCorreo")
+    public ResponseEntity<?> findUserByCorreo(@RequestBody UsuariosModel usuariosModel){
+            Optional<UsuariosModel> usuario = usuarioService.findByCorreoElectronico(usuariosModel.getCorreoElectronico());
+            if (usuario.isEmpty()){
+                return new ResponseEntity<>(false,HttpStatus.NOT_FOUND);
+            }else{
+                return new ResponseEntity<>(true,HttpStatus.OK);
+            }
+    }
 }

@@ -43,4 +43,9 @@ public class UsuariosServiceImp implements IUsuarioService{
     public Optional<UsuariosModel> findByNombreUsuarioAndContrasena(String nombreUsuario, String contrasena) {
         return iUsuarioDao.findByNombreUsuarioAndContrasena(nombreUsuario,contrasena);
     }
+
+    @Override
+    public Optional<UsuariosModel> findByCorreoElectronico(String correoElectrnoico) {
+        return iUsuarioDao.findByCorreoElectronico(correoElectrnoico);
+    }
 }

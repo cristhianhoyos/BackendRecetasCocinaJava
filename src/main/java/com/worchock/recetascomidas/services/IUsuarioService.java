@@ -19,7 +19,7 @@ public interface IUsuarioService {
 
     public Optional<UsuariosModel> findByNombreUsuarioAndContrasena(String nombreUsuario, String contrasena);
 
-    //public boolean updateUsuarioPremiun(Long id);
+    public Optional<UsuariosModel> findByCorreoElectronico(String correoElectrnoico);
 
 
 }

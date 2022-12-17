@@ -15,4 +15,6 @@ public interface IUsuarioDao extends CrudRepository<UsuariosModel,Long> {
     public Optional<UsuariosModel> findById(Long id);
 
     public Optional<UsuariosModel> findByNombreUsuarioAndContrasena(String nombreUsuario, String contrasena);
+
+    public Optional<UsuariosModel> findByCorreoElectronico(String correoElectronico);
 }
