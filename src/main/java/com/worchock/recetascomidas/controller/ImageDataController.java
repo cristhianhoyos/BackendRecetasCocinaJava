@@ -1,8 +1,7 @@
 package com.worchock.recetascomidas.controller;
 
 import com.worchock.recetascomidas.model.ImageData;
-import com.worchock.recetascomidas.model.ImageUploadResponse;
-import com.worchock.recetascomidas.services.ImageDataService;
+import com.worchock.recetascomidas.services.implementacion.ImageDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

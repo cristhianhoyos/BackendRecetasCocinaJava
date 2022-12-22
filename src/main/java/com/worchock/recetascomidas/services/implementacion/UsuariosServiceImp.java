@@ -1,7 +1,8 @@
-package com.worchock.recetascomidas.services;
+package com.worchock.recetascomidas.services.implementacion;
 
 import com.worchock.recetascomidas.dao.IUsuarioDao;
 import com.worchock.recetascomidas.model.UsuariosModel;
+import com.worchock.recetascomidas.services.IUsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UsuariosServiceImp implements IUsuarioService{
+public class UsuariosServiceImp implements IUsuarioService {
 
     @Autowired
     IUsuarioDao iUsuarioDao;

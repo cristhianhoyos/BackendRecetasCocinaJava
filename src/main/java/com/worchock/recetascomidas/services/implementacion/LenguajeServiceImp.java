@@ -1,14 +1,15 @@
-package com.worchock.recetascomidas.services;
+package com.worchock.recetascomidas.services.implementacion;
 
 import com.worchock.recetascomidas.dao.LenguajeDao;
 import com.worchock.recetascomidas.model.LenguajeModel;
+import com.worchock.recetascomidas.services.ILenguajeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
 @Service
-public class LenguajeServiceImp implements ILenguajeService{
+public class LenguajeServiceImp implements ILenguajeService {
 
     @Autowired
     LenguajeDao lenguajeDao;

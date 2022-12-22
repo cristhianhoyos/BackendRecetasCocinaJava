@@ -1,7 +1,8 @@
-package com.worchock.recetascomidas.services;
+package com.worchock.recetascomidas.services.implementacion;
 
 import com.worchock.recetascomidas.dao.IFoodDao;
 import com.worchock.recetascomidas.model.FoodModel;
+import com.worchock.recetascomidas.services.IFoodService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

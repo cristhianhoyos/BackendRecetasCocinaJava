@@ -1,4 +1,4 @@
-package com.worchock.recetascomidas.services;
+package com.worchock.recetascomidas.services.implementacion;
 
 import com.worchock.recetascomidas.dao.IFoodDao;
 import com.worchock.recetascomidas.model.FoodModel;

@@ -1,8 +1,7 @@
 package com.worchock.recetascomidas.controller;
 
-import com.worchock.recetascomidas.model.FoodModel;
 import com.worchock.recetascomidas.model.TextoCarouselPrincipal;
-import com.worchock.recetascomidas.services.TextoCarouselPrincipalImp;
+import com.worchock.recetascomidas.services.implementacion.TextoCarouselPrincipalImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

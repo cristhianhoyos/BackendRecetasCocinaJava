@@ -1,14 +1,15 @@
-package com.worchock.recetascomidas.services;
+package com.worchock.recetascomidas.services.implementacion;
 
 import com.worchock.recetascomidas.dao.ITextCarouselDao;
 import com.worchock.recetascomidas.model.TextoCarouselPrincipal;
+import com.worchock.recetascomidas.services.ITextoCarouselPrincipalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
 @Service
-public class TextoCarouselPrincipalImp implements ITextoCarouselPrincipalService{
+public class TextoCarouselPrincipalImp implements ITextoCarouselPrincipalService {
 
     @Autowired
     ITextCarouselDao iTextCarouselDao;
