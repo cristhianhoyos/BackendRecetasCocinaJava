@@ -17,7 +17,7 @@ public class Categories implements Serializable {
     private String nombreCategoria;
 
     @Column(name="idLenguaje")
-    private int idComida;
+    private int idLenguaje;
 
     @Lob
     @Column(name = "imageCategoria", length = 1000)

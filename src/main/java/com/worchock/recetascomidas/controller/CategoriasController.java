@@ -18,8 +18,11 @@ public class CategoriasController {
     @Autowired
     private CategoriasServicesImp categoriasServicesImp;
 
-    @PostMapping
-    public ResponseEntity<?> uploadImage(@RequestParam("image") MultipartFile file, @RequestBody Categories categories) throws IOException {
+    @PostMapping("/guardarCategoria")
+    public ResponseEntity<?> uploadImage(@RequestParam("image") MultipartFile file, @RequestParam("idLenguaje") Integer idLenguaje, @RequestParam("nombreCategoria") String nombreCategoria) throws IOException {
+        Categories categories = new Categories();
+        categories.setIdLenguaje(idLenguaje);
+        categories.setNombreCategoria(nombreCategoria);
         categories.setImageData(ImageUtil.compressImage(file.getBytes()));
         categoriasServicesImp.save(categories);
 
