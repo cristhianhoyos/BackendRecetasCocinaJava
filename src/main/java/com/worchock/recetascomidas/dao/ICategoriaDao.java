@@ -9,6 +9,6 @@ public interface ICategoriaDao extends CrudRepository<Categories, Long> {
 
     public Categories save(Categories categories);
 
-    public List<Categories> findAllById(Long id);
+    public List<Categories> findAllByIdLenguaje(int id);
 
 }

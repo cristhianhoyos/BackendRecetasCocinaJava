@@ -15,8 +15,8 @@ public class CategoriasServicesImp implements ICategoriasService {
     ICategoriaDao iCategoriaDao;
 
     @Override
-    public List<Categories> findAllById(Long id) {
-        return iCategoriaDao.findAllById(id);
+    public List<Categories> findAllByIdLenguaje(int id) {
+        return iCategoriaDao.findAllByIdLenguaje(id);
     }
 
     @Override

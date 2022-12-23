@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface ICategoriasService {
 
-    public List<Categories> findAllById(Long id);
+    public List<Categories> findAllByIdLenguaje(int id);
     public Categories save (Categories categories);
 }
